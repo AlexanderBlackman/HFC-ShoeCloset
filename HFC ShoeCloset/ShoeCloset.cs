@@ -44,7 +44,7 @@ namespace HFC_ShoeCloset
 
         public void DisplayClosetList()
         {
-            if (closetContents.Count == 0) Console.WriteLine("\nThe shoe closet is empty"); ;
+            if (closetContents.Count == 0) { Console.WriteLine("\nThe shoe closet is empty"); return; }
             //this 'return' exits the Method before the string is built
             StringBuilder displayedClosetList = new StringBuilder();
             for (int i = 1; i <= closetContents.Count; i++)
@@ -56,6 +56,7 @@ namespace HFC_ShoeCloset
 
         public void RemoveShoe()
         {
+            if (closetContents.Count == 0) { Console.WriteLine("\nThere is nothing left to remove"); return; }
             Console.WriteLine("Which number shoe do you which to remove?");
             DisplayClosetList();
             if (int.TryParse(Console.ReadKey().KeyChar.ToString(), out int toDelete))
