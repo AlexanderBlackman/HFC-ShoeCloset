@@ -6,7 +6,10 @@ namespace HFC_ShoeCloset
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ShoeCloset myCloset = new ShoeCloset();
+            while (true)
+                myCloset.DisplayOptions();
+            
         }
     }
 }

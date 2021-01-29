@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HFC_ShoeCloset
 {
-    class Shoe
+ public   class Shoe
     {
-        public Colours colour; public Styles style;
-        public string describeShoe;
-        Shoe(Colours Colour, Styles Style)
+        public string colour; public Styles style;
+        public string describeShoe { get { return $"a pair of {colour} {style}"; } }
+        public Shoe(string Colour, Styles Style)
         {
             this.colour = Colour;
             this.style = Style;
@@ -18,7 +18,7 @@ namespace HFC_ShoeCloset
 
     }
 
-public    enum Colours
+/*public    enum Colours
     {
         black, 
         brown,
@@ -27,14 +27,14 @@ public    enum Colours
         white,
         green
     }
-
+*/
 public    enum Styles
     {
-        Trainers,
-        Loafer,
-        Sandal,
-        Flipflop,
-        Wingtip,
-        Clogs,
+        trainers,
+        loafers,
+        sandals,
+        flipflops,
+        wingtips,
+        clogs,
     }
 }
